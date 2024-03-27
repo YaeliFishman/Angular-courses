@@ -1,0 +1,18 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <label for="id">ת.ז : <span> *</span></label>
+    <input type="number" formControlName="id">
+    
+    <label for="name">Name:</label>
+    <input type="text" formControlName="name" placeholder="{{userService.name$.value}}">
+
+    <label for="address">address:</label>
+    <input type="text" formControlName="address">
+
+    <label for="mail">mail:</label>
+    <input type="text" formControlName="mail">
+
+    <label for="password">password:</label>
+    <input type="password" formControlName="password">
+
+    <button type="submit">Submit</button>
+</form> 

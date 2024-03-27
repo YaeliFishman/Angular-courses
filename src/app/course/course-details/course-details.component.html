@@ -1,0 +1,28 @@
+<!-- <p>course-details works!</p>
+
+<div>
+    <h1>{{course?.name}}</h1>
+    <h1>{{course?.categoryId}}</h1>
+    <h3>{{course?.startDate  | date:'dd/MM/yyyy'}}</h3>
+    <h3>{{course?.img}}</h3>
+    <h3>{{course?.syllabus}}</h3>
+    <h3>{{howToLearnValue}} </h3> 
+
+
+
+    {{course | json}}
+</div> -->
+
+
+
+
+<div *ngIf="course" id="course-details-page">
+    <h1>{{ course?.name }}</h1>
+    <h3>Category: {{ getCategoryName(course?.categoryId) }}</h3>
+    <h3>Start Date: {{ course?.startDate | date:'dd/MM/yyyy' }}</h3>
+    <h3>Image: {{ course?.img }}</h3>
+    <h3>Syllabus: {{ course?.syllabus }}</h3>
+    <h3>Learning Way: {{ howToLearnValue }}</h3>
+
+    {{ course | json }}
+</div>

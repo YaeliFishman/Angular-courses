@@ -1,0 +1,38 @@
+   <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    
+      <label for="userName" ></label>
+      <input type="text" formControlName="userName" placeholder="user name" >
+
+      <label for="password">Password:</label>
+      <input type="password" formControlName="password" >
+
+    <button type="submit">Submit</button>
+  </form>
+  
+<button (click)="lecturerLogin()">כניסת מרצה</button>
+<div *ngIf="isLecturer==true">
+  <app-speecher></app-speecher>
+ </div>
+ -->
+
+
+
+
+ <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="styled-form" [@formAnimation]>
+  <label for="userName">User Name</label>
+  <input type="text" formControlName="userName" placeholder="Username" class="form-input">
+
+  <label for="password">Password</label>
+  <input type="password" formControlName="password" placeholder="Password" class="form-input">
+
+  <button type="submit" class="submit-button">Submit</button>
+
+  <br/><br/> <br/><br/>
+  <button (click)="lecturerLogin()" class="login-button">כניסת מרצה</button>
+  <br/>
+  <input *ngIf="isLecturer"  type="text" placeholder="courseName" id="courseName" > 
+</form>
+
+
+
+
